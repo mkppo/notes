@@ -1,4 +1,4 @@
-# Centos7安装mysql5.7
+# Centos7下安装mysql5.7
 
 ### 下载mysql源
 
