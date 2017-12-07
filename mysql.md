@@ -37,20 +37,21 @@ mysql安装完成后，在 /var/log/mysqld.log 文件中会生成一个默认密
 ``` bash
 [root@localhost ~]# vi /var/log/mysqld.log
 
-...
 A temporary password is generated for root@localhost: t5yZjoGr2E?Q
+```
 
+``` bash
 [root@localhost ~]# mysql -u root -p 
 Enter password t5yZjoGr2E?Q
 
 # 修改密码 必须是大小写字母数字特殊字母的组合，至少8位
-mysql>ALTER USER 'root'@'localhost' IDENTIFIED BY 'xxx'
+ALTER USER 'root'@'localhost' IDENTIFIED BY 'xxx'
 ```
 
 ### 设置允许远程登录
 
 ``` bash
-mysql>GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY 'xxx' WITH GRANT OPTION;
+GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY 'xxx' WITH GRANT OPTION;
 ```
 
 ### 配置默认编码
